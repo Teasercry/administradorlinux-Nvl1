@@ -1,0 +1,45 @@
+# Tópico 1
+
+Cronograma 
+
+ * Oque é Software Livre (https://www.gnu.org/philosophy/free-sw.pt-br.html)
+ * Copyright e Copyleft (https://www.gnu.org/licenses/copyleft.pt-br.html)
+ * Licenças GPL e BSD (https://pt.wikipedia.org/wiki/Licenças_BSD_e_GPL)
+ * Icone da Comunidade OpenSource 
+ * História do Linux(https://pt.wikipedia.org/wiki/Linux)
+
+
+Certificação 
+
+ Para tirar a certificação Linux e necessário se increver no site da LPI.org
+
+ Segue o link (https://www.lpi.org)
+
+
+Dicas
+ 
+ E muito importante que o usuário que for realizar uma prova como a lpi tenha como seu sistema 
+ operacinal principal uma maquina com o linux.  isso e  muito importante pois motiva o usuário 
+ a práticar o acesso ao Linux e realizar as configurações necessária na maquina.
+
+Dicas de S.O
+ Atualmente (03/2019) estou utilizando o  Elementary OSJuno uma vesão estável e muito bonita, 
+ porem temos outra excelentes distros como: Ubuntu, Debian, slack, Fedora, Mint e para os mais 
+ HerdECore temos o Arhc Linux rsrsrs.
+
+Virtual BoX
+
+ Outro ponto importante e que durante o desenvolviemnto do curso o aluno passe por diversas 
+ distros para ver como é o seu funcionando e a diferença que cada uma terá com relação a outra 
+ como por exemplo o Debian usa o apt e o CentOs usa o yum, por isso e importante baixar mais e
+ o virtual box para conseguir utilizar mais de um versão do linux, segue abaixo instruções de 
+ intalação da VirtualBox no linux Ubuntu.
+ 
+ link (https://vitux.com/how-to-install-virtualbox-on-ubuntu/)
+ Instalação do Debian (https://debian-handbook.info/browse/pt-BR/stable/sect.installation-steps.html)
+
+Pessoas importantes na história do Linux
+ 
+ Richard Stallman (https://pt.wikipedia.org/wiki/Richard_Matthew_Stallman)
+ 
+
