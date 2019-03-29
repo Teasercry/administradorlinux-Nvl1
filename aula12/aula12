@@ -1,0 +1,119 @@
+# Aula 12 comandos de usuários
+
+
+Usermod
+
+ usermod -  e o comando que pode realizar alterações na conta do usuário e no seu grupo de acesso
+ para visualizar todas as opções disponivels para o comando utilise "man usermod" ou "usermod --help"
+
+ "usermod -s /bin/bash nome_do_usuário" - Este comando altera o shell do usuário
+ "usermod -d" Grava a alteração do /etc/passwd
+ "usermod -m" Aletera a pasta raiz do usuário"
+ "usermod -u" altera o groupid do usuário
+ "usermod -e 2019-12-31 user" Cria uma data para expirar a CONTA do usuário 
+ "usermod -G grupo1,grupo2 user" Adiciona um usuário ao grupo
+ "usermod -a -G user" Adiciona um usuário à um determinado grupo sem remove-ló do grupo anterior
+ "deluser user" Deleta um usuário (deluser --help)
+
+ "deluser --remove-all-files user" Remove todos os arquivos do sistema que o usuário é dono.
+ "deluser --remove-home user" Remove a home do usuário é o usuário
+ "adduser -m user" Adiciona um usuário
+
+Groupmod
+
+ Este comando altera as configurações de grupo
+ Para visualizar mais informações digite "man groupmod" ou "groupmod --help"
+
+ "groupmod -g" Altera o id do grupo
+ "groupmod -n" altera o nome do grupo 
+ "groupmod -o" Permite que varios grupos tenham o mesmo id
+ "groups" Mostra os grupos ao qual o usuário pertence
+ "groupdel group" deleta um grupo do sistema
+ "addgroup group" Adiciona um grupo ao sistema
+ "getent group" Mostra todos os grupos cadastrados
+
+Su
+
+ comando utilizando para alterar de usuário no terminal
+ "su user" Troca para o usuário
+ "su - user" Troca de usuário e vai para a home do usuário logado
+
+Passwd 
+
+ Comando utilizado para alterar a senha do usuário
+ "passwd --help" para exibir todas as opções
+ "passwd -d" Remove a senha do usuário
+ "passwd -e" Exibe a data que expira a conta
+ "passwd -e" Expira a senha do usuário
+ "getent passwd" Lista todos os usuários cadastrados no sistema
+
+Chage
+ 
+ Comando utilizado para manipular informações de senhas dos usuários (chage --help)
+ "chage -M dias user" Informa em quantos dias a conta deve expirar
+ "chage -l user" exibe informações detalhadas sobre a conta do usuário
+
+# Extraindo informações do ls -l 
+
+ Saída: drwxr-xr-x 2 root root 4096 mar 22 19:34 bin
+
+ d = Indica que é um diretorio
+ drwxr-xr-x = São as permissões de acesso ao Arquivo
+ 2 = Niveis de diretório
+ root = usuário dono do arquivo
+ root = Grupo dono do arquivo
+ 4096 = Tamanho do arquivo
+ mar 22 19:34 = Data de  criação/Modificação do Diretório
+ bin = Nome do arquivo ou diretório
+
+# Exemplificando as permissões
+
+ rwx 	r-x	r-x
+  U      G       O
+ 
+  rwx = read,write,exec 	r-x = read,exec   	r-x = read,exec
+
+
+  U = User dono
+  G = Grupo dono
+  O = Outros
+ 
+# Explicando as permissões
+ 
+ r = Read(Leitura)
+ w = Write(Escrita)
+ x = Exec(Execução)
+ - = Sem permissão definida
+
+
+Mkdir 
+ 
+ Comando utilizando para criar diretórios no Linux
+ "mkdir folder"
+
+Chmod 
+ 
+ Comando utilizado para as permissões de um arquivo ou diretório
+ 
+ Permissões  Literais = Utilizando Letras 
+ "chmod g+w folder" Adiciona permissão Write(Escrita) na pasta para o grupo
+ "chmod u-rwx folder" Remover as permissões do user a pasta
+ "chmod u-x,g+w,o=rwx file" adiciona permissão a todos os grupo de uma vez
+
+Rmdir
+ 
+ Romove  diretórios no Linux
+ "rmdir folder" que e igual à "rm -r folder"
+
+
+
+
+
+
+ # Arquivo de senhas dos Usuários (/etc/shadow)
+ # Arquivo de Senhas dos  Grupos (/etc/gshadow)
+  
+ 
+
+
+

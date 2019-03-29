@@ -1,0 +1,92 @@
+# Criando Diretorios
+
+mkdir -v = Criar diretorio no modo verbose
+r = 4 
+w = 2
+x = 1 
+
+Chown change owner
+
+ chown -R folder
+
+
+Chgrp - Change Group
+ 
+ chgrp 
+
+
+Umask 
+ 
+ Comando utilizado para ver qual é a mascara de permissão no sistema Exemplo: umask 0022 
+ Para uma pasta com permissão 777 aplicando a umask 0022 o arquivo terá a permissão 0755
+
+
+Permissões especiais 
+ 
+ SUID Esta permissão pode ser uma grande ameaça a segurança, pois quando atribuída a um 
+ Arquivo executável, da permissões de dono a um usuário qualquer, na execução de um  
+ comando. Caso este comando pertença ao root, o usuário comum terá sobre ele todas as     
+ permissões que seu dono possui.
+
+
+ SGID Esta permissão e dada a um diretório, faz com que o conteúdo gravado dentro do   
+ diretório herdado do seu grupo ou diretório pai. O SGID e muito usado para replicar 
+ Permissões no SAMBA
+
+ STICKY BIT Este comando permite que os usuários sendo ou não donos do um arquivos eles 
+ Não eram capazes de deleta-ló. "Stickey bit = 1" no terminal "chmod 1777 folder"
+
+Gpaswd
+
+ Comando utilizado para definir um senha para o grupo
+ "gpasswd group"
+ 
+ Para acessar o grupo com um usuário que não pertença ao grupo com senha digite:
+ "newgrp group user"
+
+Id 
+ 
+ Este comando exibe as informações da conta do usuário
+
+Finger
+ 
+ Exibe informações da usuária no terminal
+
+Who
+ 
+ Exibe informações que quais usuários estão ligados no terminal
+
+Skel
+
+ Possui os arquivos que sejam copiados na Home dos usuários.
+
+ -/-//-/
+
+# Gerenciamento de processos 
+
+Processo E um conjunto de passos que ao serem executados geram resultados.
+
+
+PS Exibe os processos do usuário logado no sistema 
+
+ PID  = Proccess Identyfier (Identificador do Processo)
+ TTY  = Em qual terminal o processo esta sendo executado
+ TIME = Tempo de execução do processo
+ CMD  = comando que originou o processo
+ Foreground = Processos em primero plano
+ Background = Processo em segundo plano
+ TTY pts = Acesso feito de forma remota
+ "Ps -a" Exibe todos os processos do usuário logado em todos os terminais
+ "Ps u" Mostra informações dos processos do usuário logado independente do terminal
+ com mais detalhes
+ "Ps x" Mostra os processos em execução em segundo plano independente do usuário
+ "Ps aux" todos as opções acima em um único comando
+ "Ps ef" Mostra a saída do comando em forma de árvore 
+
+Top Exibe informações sobre os processos
+Htop exibe as informações de processo no modo mais verboso
+
+
+
+
+
