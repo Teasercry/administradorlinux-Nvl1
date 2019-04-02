@@ -3,7 +3,7 @@
 
 Until 
 
-#!/bin/bash
+*#!/bin/bash
 
 NUMERO=10
 until [ $NUMERO -eq 0 ]; do
@@ -11,4 +11,41 @@ until [ $NUMERO -eq 0 ]; do
 	echo
 	echo" O numero ainda eh $NUMERO. Reduzinho para $((NUMERO))
 
+
+#  Criptografia
+## SCP comando para copia segura entre terminais 
+   "scp arquivo user@ip:destino"
+
+## Criando acesso sem senha no SSH
+   Para cria uma acesso SSH entre duas máquinas linux diferente devemos criar um par de chaves SSh que seram responsáveis por 
+   autenticar a nossa entrada no servidor para isso usamos o comando "ssh-keygen -t rsa -b 4096"
+
+	1 - No servidor digite "ssh-keygen -t rsa -b 4096"
+	2 - Crie um par de chaves na sua máquina local "ssh-keygen -t rsd -b 4096"
+	3 - Copie o par de chaves publicas do servidor para /home/user/.ssh/autorized_keys
+
+## Assinaturas GPG 
+   Sistema de assinaturas de arquivos que permite enviar e codificar aquivos usando um par de chaves assinado pelo gpg
+   Criando par de chaves gpg "gpg --gen-key"
+
+## Interface gráfica  
+   Gerenciador de Janelas - KDE, Gnome, XFCE
+   Display Manager - Responsável por gerenciar o dsplay do usuário	
+   Servidor XWindows ou servidor de interface gráfica Xorg
+   
+
+ * 1 - Instalando Xorg "apt-cache search x11 | grep -i xorg"  &&  "apt install pacote_De_video"
+ * 2 - configurando o servidor X "X -configure" Gera o arquivo de configuração xorg.config.new
+ * 3 - Iniciando o Servidor X11 "X" && Variavel display "DISPLAY=:0.0" Exportante Varialvel display "exporte DISPLAY=ip:0.0
+       Adicionando ip a lista de controle "xhost +172.158.50.211"  
+ * 4 - Instalando o display manager "apt-cache search display | grep dm" && "apt install gdm3"
+ * 5 - Acessibilidade "apt install gnome-orca"
+ 
+
+   
+    
+## Gerenciamento de impressoras
+
+ 	
+ 	 
 
