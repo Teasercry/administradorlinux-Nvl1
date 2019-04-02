@@ -1,0 +1,10 @@
+# Processo e arquivos shell script
+
+	* Background - Processos que estão executando em segundo plano.
+	* Foreground - Processos que estão em primeiro plano.
+
+	control + z - Para o processo e manda para segundo plano
+	"jobs" = Exibe todos os processos em segundo plano
+	"fg ndojob" = traz o processo para primeiro plano
+	"bg ndojob" = Executa um processo em segundo plano
+	"comando &" 

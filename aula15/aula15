@@ -1,0 +1,14 @@
+# Programação em shell script 
+
+
+Until 
+
+#!/bin/bash
+
+NUMERO=10
+until [ $NUMERO -eq 0 ]; do
+
+	echo
+	echo" O numero ainda eh $NUMERO. Reduzinho para $((NUMERO))
+
+
