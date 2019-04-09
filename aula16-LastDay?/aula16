@@ -1,0 +1,147 @@
+# Agendador de Tarefas
+
+ Para agendar tarefas nos temos o  cron, anacron, at
+
+1 - Agendamento global de tarefas - São tarefas agendadas que são aplicadas 
+
+	Arquivo: "/etc/crontab"
+
+	Representação dos dias da seman Domingo-Segunda 0-7
+	m = Minutos
+	h = Horas
+	dom = dias da semana
+	
+
+## agendador de tarefas cron
+  
+	"contab -e" Abre a tabela de agendamento de tarefsa do usuário logado
+
+
+## at Agendador de tarefas 
+
+   Manual do At "man at"
+
+   Instalando o at "apt install at"
+   Criando agendamento com at para daqui 2horas "at now +2 hours -f /etc/scripts/arquivo.sh"
+   Mostrar os agendamentos do at "at -l" || "atq" Lista todos os agendamentos
+   Removendo agendamentos do at "atrm numero_do_agendamento" || "at -d numero_do_agendamento"
+
+   "uptime" Exibe a carga de processos da maquina
+
+   Executa um comando "comando.sh | bath" 
+   
+
+# Localização e internacionalização (Configurações de time/Zone)
+
+  Exibe/determina a linguagem da maquina "echo $LANG" para mudar a linguagem use "LANG=en.UTF8"
+  Variavel para alterar linguagem do teclado "echo $LANGUAGE"
+
+  "dpkg-reconfigure" tzdata entrou no lugar no tzconfig
+
+## Mostrando a data
+   
+   "date" Exibe a data
+   "date +%d-%m-%Y" Exibe a data em formato dd-mm-yyyy
+   "date -w" exibe a semana do ano
+   
+## Alterando data e hora do sistema com informação do relógio da bios
+
+  "hwclok --hctosys" Altera a data para a mesma data da bios
+  "hwclock --systohc" altera a data da bios com a hora do sistema
+  "locale" Exibe informações dos localização do sistema 
+  
+## iconv Converte um arquivo para outro formato
+ 
+   "iconv --help" exibe as opções do comando || "man iconv"
+   "iconv -f UTF8 < arquivo.txt > arquivonovo.txt" Converte o arquivo para o formato UTF8
+   
+
+ISO-8859-1 - Padrão de codificaçnao Americano não aceita caracteres espeficicos do portugues brasil
+
+UTF8 - Padrão de codificação usado para suporte o idioma portugues Brasil.
+
+ASCII - Padrão de codificação (American Standard Code International Information) testo puro
+
+
+# NTP Network Time Protocolo - Utilizado para configurar relogios internos de 
+  sistemas conectados em rede atrav´s de um daemon que é um ntpd
+  
+  Para instalar "apt install ntpdate" && "apt install ntp" 
+  Consulta data e hora em um servidor ntp "ntpdate -q servidor"
+  Altera data e hora com base em ums ervidro ntp "ntpdate -u servidor"
+
+  Arquivo de cconfiguração "/etc/ntp/conf"
+
+  stratum - Servidores confiaveis que você configura para que seu computador configure automaticamente a 
+  data e a hora
+  
+# Localização 
+  
+  "locale" Variavel que define a codificação/localização/mapa de Caracteres do sistema
+  "LANG" && "LC"  Definem a variavél de codificação do sistema
+  "LANGUAGE" Define o idioma do sistema
+  "locale-gen" Gera uma nova localização de codificação de linguagem para o sistema
+  
+
+ # Log do  sistema
+  
+  Aquivos de configurações de Syslog:" syslog.conf, syslogd, klogd, logger"
+
+   sysklog - Coordenas as mensagem enviadas do kernel
+   syslogd - Deamon que e usado por diversos programas do sistema "/etc/syslogd.conf"
+   
+   facility - Um subsistema que gera um mensagem de determinado tipo: auth, user, ftp, mail, local
+   Prioridade - Nível de severidade da mesngem gerada(notice, info, warn, erro, crit, debug)
+
+## Onde os aquivos de log são gerados 
+   
+   Arquivos regulares - tipo texto
+   Dispositivo terminal - Console
+   Host remoto - Mensagem enviadas para outro host em tempo real syslogd
+   Lista de usuário - Usuários que podem receber essas mensagens
+   Daemon Klogd - Intercepta as mensagem de log que o kernel nucleo gera, são geralmente proc's do sistema
+
+   Atualemnte o deamon que controla o serviço de log é o rsyslogd e o arquivo de configuração "/etc/rsyslog.conf"
+
+## Rotacionando o log
+  
+   arquivo de configuração do rotate "/etc/logrotate.conf"
+
+## Conceitos de agente de transporte de mensagens MTA 
+   Inplementar o serviço de smtp e smtpd em um servidor de e-mail
+ 
+   * Sendmail
+   * Postfix
+   * Mailq
+   * Exim
+   * Qmail
+
+
+## Alias de email,  fucniona como um espelho do email apra onde os email podem ser redirecionados 
+ 
+   "apt install sendmail" Instala o Send mail
+   Arquivo para redirecionar email (/home/user/.forward)
+
+## Grupo de e-mail que ira recebar as mensagens
+  
+   staff: include:/etc/mail/staff.aliases
+
+## Visualizar fila de e-mail usando o sendmail
+  
+   sendmail -bp
+
+## Fazer com que uma mensagem fure a fila de email
+ 
+   sendmail -qSuser
+   sendmail -qNuser
+
+
+
+
+
+
+
+
+
+
+	
